@@ -17,33 +17,23 @@ body {
 .info-container {
   margin: 10px 30px 0 50px;
   font-size: 14px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
-  /* justify-content: center; */
-  /* border: solid 6px green; */
+
 }
 
 .title {
   gap: 20px;
   padding: 10px;
   margin-bottom: 20px;
-  /* background-color: palegreen; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* background-color: yellow; */
+
 }
 
 .company-name {
   font-size: 20px;
   color: #000000;
   text-decoration: none;
-  /* background-color: red; */
 }
 
 .company-name:hover {
-  /* text-decoration: none; */
   color: #000000;
 }
 
@@ -53,7 +43,6 @@ body {
 
 .company-image {
   border-radius: 10px;
-  /* border: solid 3px salmon; */
 }
 
 .description {
@@ -61,11 +50,7 @@ body {
   padding: 20px;
   line-height: 30px;
   font-size: 16px;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
 
-  /* background-color: violet; */
 }
 
 .price-changes {
@@ -73,26 +58,16 @@ body {
   gap: 20px;
   margin-left: 20px;
   font-weight: bold;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: flex-start; */
-  /* border: solid 3px salmon; */
+
 }
 
 .chart-container {
   margin-top: 50px;
   margin-left: 60px;
   padding-bottom: 35px;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: flex-start; */
-
-  /* border: solid 3px red; */
 }
 
 .myChart {
   height: 500px !important;
   width: 1000px !important;
-
-  /* border: solid 6px purple; */
 }
