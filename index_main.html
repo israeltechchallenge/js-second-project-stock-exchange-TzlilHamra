@@ -14,41 +14,43 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style_main.css" />
+    <link rel="stylesheet" href="css/style_main.css" />
     <title>main</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/3781/3781628.png"
+    />
   </head>
   <body>
-    <div class="marquee-comtainer d-flex"></div>
-    <div class="canvas d-flex align-items-start justify-content-center">
-      <div
-        class="sreach-container d-flex flex-column align-items-start justify-content-center"
-      >
-        <div
-          class="search-bar-line1 d-flex align-items-center justify-content-center"
-        >
-          <form action="">
-            <input
-              class="search-bar font-weight-bold border-0"
-              type="text"
-              placeholder="Search"
-              onfocus="this.value=''"
-            />
-          </form>
-          <button
-            id="btn-search"
-            class="btn-search d-flex align-items-center font-weight-bold border-0"
-          >
-            Search
-          </button>
-          <div class="spinner-border" role="status"></div>
-        </div>
-        <div class="result-container">
-          <ul class="user-list"></ul>
-        </div>
-      </div>
-    </div>
+    <div class="marquee-container"></div>
+    <h2 class="mt-5 d-flex align-items-start justify-content-center">
+      Search Nasdaq Stocks
+    </h2>
+    <div
+      class="search-container d-flex flex-row align-items-center justify-content-center"
+    ></div>
+    <div class="results-container"></div>
 
-    <script src="script_main.js"></script>
-    <!-- <script src="Marquee.js"></script> -->
+    <script src="js/Marquee.js"></script>
+    <script src="js/SearchForm.js"></script>
+    <script src="js/SearchResult.js"></script>
+
+    <script>
+      const baseUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com`;
+
+      (async function () {
+        const marquee = new Marquee(
+          document.querySelector('.marquee-container')
+        );
+        marquee.getMarqueeData(baseUrl);
+
+        const form = new SearchForm('.search-container');
+        const results = new SearchResult('.results-container');
+        form.onSearch((x) => {
+          results.renderSearchResult(x);
+        });
+      })();
+    </script>
   </body>
 </html>

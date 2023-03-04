@@ -1,5 +1,5 @@
 let urlParams = new URLSearchParams(window.location.search);
-let symbol = urlParams.get('symbol'); // "edit"
+let symbol = urlParams.get('symbol');
 
 let baseUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com`;
 
@@ -27,8 +27,8 @@ async function renderCompanyProfile(data) {
   companyName.text = data.profile.companyName;
   companyName.href = data.profile.website;
 
-  let companydescription = (document.querySelector('.description').innerHTML =
-    data.profile.description);
+  let companydescription = document.querySelector('.description');
+  companydescription.innerHTML = data.profile.description;
 
   let stockPrice = document.querySelector('.stock-price');
   stockPrice.innerText = data.profile.price;
@@ -87,13 +87,3 @@ function renderChart(data) {
     },
   });
 }
-function setFavicons(favImg) {
-  let headTitle = document.querySelector('head');
-  let setFavicon = document.createElement('link');
-  setFavicon.setAttribute('rel', 'shortcut icon');
-  setFavicon.setAttribute('href', favImg);
-  headTitle.appendChild(setFavicon);
-}
-setFavicons(
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/1200px-Info_Simple_bw.svg.png'
-);
