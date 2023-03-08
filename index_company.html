@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style_company.css" />
+    <title>Company</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/1200px-Info_Simple_bw.svg.png"
+    />
+  </head>
+  <body>
+    <div class="canvas">
+      <div
+        class="info-container d-flex flex-column align-items-start justify-content-center"
+      >
+        <div class="title d-flex align-items-center justify-content-center">
+          <img class="company-image" />
+          <a class="company-name font-weight-bold"></a>
+        </div>
+        <div
+          class="price-changes d-flex align-items-center justify-content-start"
+        >
+          Stock Price:
+          <div class="stock-price"></div>
+          <div class="percentages-changes"></div>
+        </div>
+        <div
+          class="description d-flex align-items-center justify-content-center"
+        ></div>
+      </div>
+
+      <div
+        class="chart-container d-flex align-items-center justify-content-start"
+      >
+        <canvas id="myChart" class="myChart"></canvas>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script_company.js"></script>
+  </body>
+</html>
